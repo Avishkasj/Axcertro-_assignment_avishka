@@ -54,23 +54,29 @@ class ProductDetailPage extends StatelessWidget {
                     product.description,
                     style: TextStyle(fontSize: 16),
                   ),
-                  SizedBox(height: 16),
-                  ElevatedButton(
-                    onPressed: () {
-
-                      final ShoppingCart shoppingCart = Provider.of<ShoppingCart>(context, listen: false);
-
-                      shoppingCart.addToCart(product);
-
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: Text('${product.name} added to cart'),
-                          duration: Duration(seconds: 2),
-                        ),
-                      );
-                    },
-                    child: Text('Add to Cart'),
+                  SizedBox(height: 20),
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        final ShoppingCart shoppingCart = Provider.of<ShoppingCart>(context, listen: false);
+                        shoppingCart.addToCart(product);
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text('${product.name} Product added to cart'),
+                            duration: Duration(seconds: 4),
+                          ),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                         backgroundColor: Colors.black // Background color
+                      ),
+                      child: Text('Add to Cart',style: TextStyle(
+                        color: Colors.white,
+                      ),),
+                    ),
                   ),
+
                 ],
               ),
             ),

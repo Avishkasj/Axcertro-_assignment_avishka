@@ -5,6 +5,9 @@ import 'ProductDetailPage.dart';
 import 'Provider/Product_state.dart';
 import '../models/product.dart';
 
+import 'ShoppingCartPage.dart';
+import 'Provider/ShoppingCart_state.dart';
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -42,6 +45,18 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Gadgets'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.shopping_cart),
+            onPressed: () {
+              // Navigate to the ShoppingCartPage
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ShoppingCartPage()),
+              );
+            },
+          ),
+        ],
       ),
       body: Column(
         children: [
