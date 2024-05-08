@@ -30,6 +30,15 @@ class _HomePageState extends State<HomePage> {
     final productNotifier = Provider.of<ProductNotifier>(context);
     List<Product> products = productNotifier.products;
 
+    // Filtered products based on search query
+    List<Product> filteredProducts = products.where((product) {
+      if (_searchController.text.isEmpty) {
+        return true; // Show all products if search query is empty
+      } else {
+        return product.name.toLowerCase().contains(_searchController.text.toLowerCase());
+      }
+    }).toList();
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Gadgets'),
@@ -49,43 +58,64 @@ class _HomePageState extends State<HomePage> {
               },
             ),
           ),
-          Expanded(
-            child: ListView.builder(
-              itemCount: products.length,
-              itemBuilder: (context, index) {
-                final product = products[index];
-                // Filter products based on search query
-                if (_searchController.text.isNotEmpty &&
-                    !product.name.toLowerCase().contains(_searchController.text.toLowerCase())) {
-                  return Container(); // Hide products that don't match the search query
-                }
-                return GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => ProductDetailPage(product: product),
+          Visibility(
+            visible: filteredProducts.isNotEmpty, // Show GridView only if there are matching search results
+            child: Expanded(
+              child: GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2, // Two cards in one row
+                  crossAxisSpacing: 8.0,
+                  mainAxisSpacing: 8.0,
+                ),
+                itemCount: filteredProducts.length,
+                itemBuilder: (context, index) {
+                  final product = filteredProducts[index];
+                  return GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProductDetailPage(product: product),
+                        ),
+                      );
+                    },
+                    child: Card(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Image.network(
+                            product.images.isNotEmpty ? product.images[0] : '',
+                            width: double.infinity,
+                            height: 130.0,
+                            fit: BoxFit.cover,
+                            errorBuilder: (context, error, stackTrace) {
+                              return Icon(Icons.image); // Display an icon if image fails to load
+                            },
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  product.name,
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                                Text(product.price),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
-                    );
-                  },
-                  child: Card(
-                    child: ListTile(
-                      leading: Image.network(
-                        product.images.isNotEmpty ? product.images[0] : '',
-                        width: 50,
-                        height: 50,
-                        fit: BoxFit.cover,
-                        errorBuilder: (context, error, stackTrace) {
-                          return Icon(Icons.image); // Display an icon if image fails to load
-                        },
-                      ),
-                      title: Text(product.name),
-                      subtitle: Text(product.price),
                     ),
-                  ),
-                );
-              },
+                  );
+                },
+              ),
             ),
+          ),
+          Visibility(
+            visible: filteredProducts.isEmpty, // Show message if there are no matching search results
+            child: Text('No matching products found.'),
           ),
         ],
       ),
