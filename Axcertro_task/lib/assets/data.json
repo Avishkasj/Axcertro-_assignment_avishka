@@ -1,0 +1,262 @@
+[
+  {
+    "id": 1,
+    "name": "Test Product 1",
+    "handler": "test_product_1",
+    "description": "Innovative device offering exceptional performance and sleek design.",
+    "category": "Smartphones",
+    "price": "$499",
+    "images": [
+      "https://picsum.photos/id/237/640/480",
+      "https://picsum.photos/id/238/640/480",
+      "https://picsum.photos/id/239/640/480"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Test Product 2",
+    "handler": "test_product_2",
+    "description": "Innovative device offering exceptional performance and sleek design.",
+    "category": "Smartphones",
+    "price": "$499",
+    "images": [
+      "https://picsum.photos/id/240/640/480",
+      "https://picsum.photos/id/241/640/480",
+      "https://picsum.photos/id/242/640/480"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Test Product 3",
+    "handler": "test_product_3",
+    "description": "Innovative device offering exceptional performance and sleek design.",
+    "category": "Smartphones",
+    "price": "$599",
+    "images": [
+      "https://picsum.photos/id/243/640/480",
+      "https://picsum.photos/id/244/640/480",
+      "https://picsum.photos/id/245/640/480"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Test Product 4",
+    "handler": "test_product_4",
+    "description": "Innovative device offering exceptional performance and sleek design.",
+    "category": "Smartphones",
+    "price": "$699",
+    "images": [
+      "https://picsum.photos/id/246/640/480",
+      "https://picsum.photos/id/247/640/480",
+      "https://picsum.photos/id/248/640/480"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Test Product 5",
+    "handler": "test_product_5",
+    "description": "Innovative device offering exceptional performance and sleek design.",
+    "category": "Smartphones",
+    "price": "$199",
+    "images": [
+      "https://picsum.photos/id/249/640/480",
+      "https://picsum.photos/id/250/640/480",
+      "https://picsum.photos/id/251/640/480"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Test Product 6",
+    "handler": "test_product_6",
+    "description": "Innovative device offering exceptional performance and sleek design.",
+    "category": "Smartphones",
+    "price": "$129",
+    "images": [
+      "https://picsum.photos/id/252/640/480",
+      "https://picsum.photos/id/253/640/480",
+      "https://picsum.photos/id/254/640/480"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Test Product 7",
+    "handler": "test_product_7",
+    "description": "Innovative device offering exceptional performance and sleek design.",
+    "category": "Smartphones",
+    "price": "$159",
+    "images": [
+      "https://picsum.photos/id/255/640/480",
+      "https://picsum.photos/id/256/640/480",
+      "https://picsum.photos/id/257/640/480"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Test Product 8",
+    "handler": "test_product_8",
+    "description": "Innovative device offering exceptional performance and sleek design.",
+    "category": "Smartphones",
+    "price": "$159",
+    "images": [
+      "https://picsum.photos/id/258/640/480",
+      "https://picsum.photos/id/259/640/480",
+      "https://picsum.photos/id/260/640/480"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Test Product 9",
+    "handler": "test_product_9",
+    "description": "Innovative device offering exceptional performance and sleek design.",
+    "category": "Smartphones",
+    "price": "$459",
+    "images": [
+      "https://picsum.photos/id/261/640/480",
+      "https://picsum.photos/id/262/640/480",
+      "https://picsum.photos/id/263/640/480"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Test Product 10",
+    "handler": "test_product_10",
+    "description": "Innovative device offering exceptional performance and sleek design.",
+    "category": "Smartphones",
+    "price": "$559",
+    "images": [
+      "https://picsum.photos/id/264/640/480",
+      "https://picsum.photos/id/265/640/480",
+      "https://picsum.photos/id/266/640/480"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Test Product 11",
+    "handler": "test_product_11",
+    "description": "Innovative device offering exceptional performance and sleek design.",
+    "category": "Smartphones",
+    "price": "$199",
+    "images": [
+      "https://picsum.photos/id/267/640/480",
+      "https://picsum.photos/id/268/640/480",
+      "https://picsum.photos/id/269/640/480"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Test Product 12",
+    "handler": "test_product_12",
+    "description": "Innovative device offering exceptional performance and sleek design.",
+    "category": "Smartphones",
+    "price": "$129",
+    "images": [
+      "https://picsum.photos/id/270/640/480",
+      "https://picsum.photos/id/271/640/480",
+      "https://picsum.photos/id/272/640/480"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Test Product 13",
+    "handler": "test_product_13",
+    "description": "Innovative device offering exceptional performance and sleek design.",
+    "category": "Smartphones",
+    "price": "$529",
+    "images": [
+      "https://picsum.photos/id/273/640/480",
+      "https://picsum.photos/id/274/640/480",
+      "https://picsum.photos/id/275/640/480"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Test Product 14",
+    "handler": "test_product_14",
+    "description": "Innovative device offering exceptional performance and sleek design.",
+    "category": "Smartphones",
+    "price": "$99",
+    "images": [
+      "https://picsum.photos/id/276/640/480",
+      "https://picsum.photos/id/277/640/480",
+      "https://picsum.photos/id/278/640/480"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Test Product 15",
+    "handler": "test_product_15",
+    "description": "Innovative device offering exceptional performance and sleek design.",
+    "category": "Smartphones",
+    "price": "$19",
+    "images": [
+      "https://picsum.photos/id/279/640/480",
+      "https://picsum.photos/id/280/640/480",
+      "https://picsum.photos/id/281/640/480"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Test Product 16",
+    "handler": "test_product_16",
+    "description": "Innovative device offering exceptional performance and sleek design.",
+    "category": "Smartphones",
+    "price": "$29",
+    "images": [
+      "https://picsum.photos/id/282/640/480",
+      "https://picsum.photos/id/283/640/480",
+      "https://picsum.photos/id/284/640/480"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Test Product 17",
+    "handler": "test_product_17",
+    "description": "Innovative device offering exceptional performance and sleek design.",
+    "category": "Smartphones",
+    "price": "$59",
+    "images": [
+      "https://picsum.photos/id/285/640/480",
+      "https://picsum.photos/id/286/640/480",
+      "https://picsum.photos/id/287/640/480"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Test Product 18",
+    "handler": "test_product_18",
+    "description": "Innovative device offering exceptional performance and sleek design.",
+    "category": "Smartphones",
+    "price": "$659",
+    "images": [
+      "https://picsum.photos/id/288/640/480",
+      "https://picsum.photos/id/289/640/480",
+      "https://picsum.photos/id/290/640/480"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Test Product 19",
+    "handler": "test_product_19",
+    "description": "Innovative device offering exceptional performance and sleek design.",
+    "category": "Smartphones",
+    "price": "$659",
+    "images": [
+      "https://picsum.photos/id/291/640/480",
+      "https://picsum.photos/id/292/640/480",
+      "https://picsum.photos/id/293/640/480"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Test Product 20",
+    "handler": "test_product_20",
+    "description": "Innovative device offering exceptional performance and sleek design.",
+    "category": "Smartphones",
+    "price": "$559",
+    "images": [
+      "https://picsum.photos/id/294/640/480",
+      "https://picsum.photos/id/295/640/480",
+      "https://picsum.photos/id/296/640/480"
+    ]
+  }
+]
