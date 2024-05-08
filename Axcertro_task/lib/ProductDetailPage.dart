@@ -14,18 +14,49 @@ class ProductDetailPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(product.name),
       ),
-      body: Padding(
-        padding: EdgeInsets.all(16.0),
+      body: SingleChildScrollView(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Center(child: Image.network(product.images[0], width: 200, height: 200)),
-            SizedBox(height: 20),
-            Text(product.name, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-            SizedBox(height: 10),
-            Text(product.price, style: TextStyle(fontSize: 18)),
-            SizedBox(height: 20),
-            Text(product.description, style: TextStyle(fontSize: 16)),
+            // Product images at the top
+            Container(
+              height: 300,
+              child: PageView.builder(
+                itemCount: product.images.length,
+                itemBuilder: (context, index) {
+                  return Image.network(
+                    product.images[index],
+                    fit: BoxFit.cover,
+                    errorBuilder: (context, error, stackTrace) {
+                      return Icon(Icons.image); // Display an icon if image fails to load
+                    },
+                  );
+                },
+              ),
+            ),
+            // Content below the images
+            Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Price: ${product.price}',
+                    style: TextStyle(fontSize: 18),
+                  ),
+                  SizedBox(height: 8),
+                  Text(
+                    'Description:',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 4),
+                  Text(
+                    product.description,
+                    style: TextStyle(fontSize: 16),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),

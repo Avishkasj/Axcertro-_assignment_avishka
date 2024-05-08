@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
 import 'ProductDetailPage.dart';
-import 'models/product.dart';
+import 'Provider/Product_state.dart';
 
 
 class HomePage extends StatelessWidget {
-  final List<Product> products;
-
-  HomePage({required this.products});
-
   @override
   Widget build(BuildContext context) {
+    final productNotifier = Provider.of<ProductNotifier>(context);
+    final products = productNotifier.products;
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Gadgets'),
@@ -17,31 +18,29 @@ class HomePage extends StatelessWidget {
       body: ListView.builder(
         itemCount: products.length,
         itemBuilder: (context, index) {
+          final product = products[index];
           return GestureDetector(
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => ProductDetailPage(product: products[index]),
+                  builder: (context) => ProductDetailPage(product: product),
                 ),
               );
             },
             child: Card(
-              child: Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Row(
-                  children: [
-                    Image.network(products[index].images[0], width: 100, height: 100),
-                    SizedBox(width: 10),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(products[index].name, style: TextStyle(fontSize: 18)),
-                        Text(products[index].price, style: TextStyle(fontSize: 16)),
-                      ],
-                    ),
-                  ],
+              child: ListTile(
+                leading: Image.network(
+                  product.images.isNotEmpty ? product.images[0] : '',
+                  width: 50,
+                  height: 50,
+                  fit: BoxFit.cover,
+                  errorBuilder: (context, error, stackTrace) {
+                    return Icon(Icons.image); // Display an icon if image fails to load
+                  },
                 ),
+                title: Text(product.name),
+                subtitle: Text(product.price),
               ),
             ),
           );
