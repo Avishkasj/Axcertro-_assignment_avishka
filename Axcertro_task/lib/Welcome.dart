@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'HomePage.dart';
+import 'login.dart';
+
 
 class welcome extends StatefulWidget {
   const welcome({Key? key}) : super(key: key);
@@ -75,7 +77,7 @@ class _welcomeState extends State<welcome> {
                           ),
                           onPressed: () {
                             Navigator.push(context,
-                                MaterialPageRoute(builder: (context) => HomePage()));
+                                MaterialPageRoute(builder: (context) => Login()));
                           },
                         ),
                       ),
